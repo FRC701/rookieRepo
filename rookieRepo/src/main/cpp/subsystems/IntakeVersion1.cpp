@@ -12,5 +12,5 @@ voidIntakeVersion1::Periodic() {}
 strawberries are the best! 
 Cats are cute :D*/
 
-strawberries are the best! 
-dogs are cute too */
+/* strawberries are the best! 
+dogs are cute too :D */
