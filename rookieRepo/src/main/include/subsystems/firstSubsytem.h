@@ -5,17 +5,21 @@
 #pragma once
 
 #include <frc2/command/SubsystemBase.h>
+#include <ctre/Phoenix.h>
 
 class firstSubsytem : public frc2::SubsystemBase {
  public:
-  firstSubsytem();
+  firstSubsytem(WPI_TalonFX& timmmysid, WPI_TalonFX& jimmysid);
 
   /**
    * Will be called periodically whenever the CommandScheduler runs.
    */
   void Periodic() override;
+  double StartMotorSpin(double speed);
 
  private:
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
+  WPI_TalonFX& timmyMotor;
+  WPI_TalonFX& jimmyMoter;
 };
