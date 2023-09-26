@@ -5,17 +5,20 @@
 #pragma once
 
 #include <frc2/command/SubsystemBase.h>
+#include <ctre/Phoenix.h>
 
 class IntakeVersion3 : public frc2::SubsystemBase {
  public:
-  IntakeVersion3();
+  IntakeVersion3(WPI_TalonFX& ID1 , WPI_TalonFX& ID2);
 
   /**
    * Will be called periodically whenever the CommandScheduler runs.
    */
   void Periodic() override;
-
+double NameKhoa(double MotorSpeed);
  private:
+ WPI_TalonFX& CreativeMotorName1;
+ WPI_TalonFX& CreativeMotorName2;
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
 };
