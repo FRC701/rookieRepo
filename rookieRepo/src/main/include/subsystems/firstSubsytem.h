@@ -15,7 +15,9 @@ class firstSubsytem : public frc2::SubsystemBase {
    * Will be called periodically whenever the CommandScheduler runs.
    */
   void Periodic() override;
-  double StartMotorSpin(double speed);
+  double TimmyMotorSpin(double speed);
+  double JimmyMoterSpin(double speed);
+  double StartBothMotors(double speed);
 
  private:
   // Components (e.g. motor controllers and sensors) should generally be

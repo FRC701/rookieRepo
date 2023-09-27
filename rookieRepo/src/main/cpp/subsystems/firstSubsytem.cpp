@@ -15,6 +15,16 @@ firstSubsytem::firstSubsytem(WPI_TalonFX& timmysid, WPI_TalonFX& jimmysid)
 //hello
 void firstSubsytem::Periodic() {}
 //qubek
-double firstSubsystem::StartMotorSpin(double speed){
-    timmyMotor.
+double firstSubsytem::TimmyMotorSpin(double speed){
+    timmyMotor.Set(speed);
+    return speed;
+}
+double firstSubsytem::JimmyMoterSpin(double speed){
+    jimmyMoter.Set(speed);
+    return speed;
+}
+double firstSubsytem::StartBothMotors(double speed){
+    jimmyMoter.Set(speed);
+    timmyMotor.Set(speed);
+    return speed;
 }
