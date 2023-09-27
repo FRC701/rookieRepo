@@ -17,7 +17,13 @@ void IntakeVersion2::Periodic() {}
 // branching off the branch woahhhh
 // branching off the branch part 2
 // part 3 omg
-double IntakeVersion2::SETspeed(double motorspeed)
+double IntakeVersion2::SETspeed(double Motorspeed)
 {
-    IntakeM1.Set(SETspeed);
+    IntakeM1.Set(Motorspeed);
+    return Motorspeed;
+}
+double IntakeVersion2::SETspin(double Motorspin)
+{
+    IntakeM2.Set(Motorspin);
+    return Motorspin;
 }

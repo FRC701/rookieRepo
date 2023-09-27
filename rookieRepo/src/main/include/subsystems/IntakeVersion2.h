@@ -15,6 +15,8 @@ class IntakeVersion2 : public frc2::SubsystemBase {
    */
   void Periodic() override;
   double SETspeed(double Motorspeed)
+  double SETspin(double Motorspin)
+  double SETspinSpeed(double Spinspeed)
 
  private:
   // Components (e.g. motor controllers and sensors) should generally be
