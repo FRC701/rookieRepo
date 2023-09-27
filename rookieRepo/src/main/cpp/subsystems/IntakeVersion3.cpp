@@ -17,5 +17,18 @@ void IntakeVersion3::Periodic() {}
 // anything something dlksjbals
 // any change an edit another edit
 
-double IntakeVersion3:: NameKhoa(double MotorSpeed)
-{CreativeMotorName1.Set(MotorSpeed);}
+double IntakeVersion3:: NameKhoa(double MotorSpeed){
+  CreativeMotorName1.Set(MotorSpeed);
+  return MotorSpeed;
+  }
+
+  double IntakeVersion3:: NameKyle(double MotorSpeed){
+    CreativeMotorName2.Set(MotorSpeed) ;
+    return MotorSpeed;
+  }
+
+  double IntakeVersion3::NameJesse(double MotorSpeed){
+    CreativeMotorName1.Set(MotorSpeed);
+    CreativeMotorName2.Set(MotorSpeed);
+    return MotorSpeed;
+ }

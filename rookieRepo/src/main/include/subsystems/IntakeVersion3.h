@@ -16,6 +16,8 @@ class IntakeVersion3 : public frc2::SubsystemBase {
    */
   void Periodic() override;
 double NameKhoa(double MotorSpeed);
+double NameKyle(double MotorSpeed);
+double NameJesse(double MotorSpeed);
  private:
  WPI_TalonFX& CreativeMotorName1;
  WPI_TalonFX& CreativeMotorName2;
