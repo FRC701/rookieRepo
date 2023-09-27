@@ -4,8 +4,11 @@
 
 #include "subsystems/IntakeV4.h"
 
-IntakeV4::IntakeV4() = default;
-
+IntakeV4::IntakeV4(WPI_TalonFX& ID1, WPI_TalonFX& ID2)
+        : LosMotores(ID1),
+          LasMotores(ID2)
+{
+}
 // This method will be called once per scheduler run
 void IntakeV4::Periodic() {}
  //kaerjgka
@@ -15,3 +18,9 @@ void IntakeV4::Periodic() {}
 //we wont
 //jesssdoj fiehrseidgtsjarwfejsgveodfiotdv
 //mwah
+
+double IntakeV4:: motorSpeed(double MotorSpeed)
+{
+    LosMotores.Set(MotorSpeed);
+    return MotorSpeed;
+}

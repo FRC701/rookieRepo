@@ -5,10 +5,11 @@
 #pragma once
 
 #include <frc2/command/SubsystemBase.h>
+#include <ctre/Phoenix.h>
 
 class IntakeV4 : public frc2::SubsystemBase {
  public:
-  IntakeV4();
+  IntakeV4(WPI_TalonFX& ID1, WPI_TalonFX& ID2);
 
   /**
    * Will be called periodically whenever the CommandScheduler runs.
@@ -18,4 +19,8 @@ class IntakeV4 : public frc2::SubsystemBase {
  private:
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
+double motorSpeed(double MotorSpeed);
+  private:
+  WPI_TalonFX& LosMotores;
+  WPI_TalonFX& LasMotores;
 };
