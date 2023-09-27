@@ -16,11 +16,14 @@ class IntakeV4 : public frc2::SubsystemBase {
    */
   void Periodic() override;
 
- private:
+
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
+double motorSpeed2(double MotorSpeed);
+double motorRun(double MotorSpeed);
 double motorSpeed(double MotorSpeed);
   private:
-  WPI_TalonFX& LosMotores;
-  WPI_TalonFX& LasMotores;
+  WPI_TalonFX& MotorOne;
+  WPI_TalonFX& MotorTwo;
 };
+
