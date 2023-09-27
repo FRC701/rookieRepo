@@ -4,7 +4,11 @@
 
 #include "subsystems/IntakeVersion2.h"
 
-IntakeVersion2::IntakeVersion2() = default;
+IntakeVersion2::IntakeVersion2(WPI_TalonFX ID1, WPI_TalonFX ID2)
+    : IntakeM1(ID1)
+          IntakeM2(ID2)
+{
+}
 
 // This method will be called once per scheduler run
 void IntakeVersion2::Periodic() {}
@@ -13,3 +17,7 @@ void IntakeVersion2::Periodic() {}
 // branching off the branch woahhhh
 // branching off the branch part 2
 // part 3 omg
+double IntakeVersion2::SETspeed(double motorspeed)
+{
+    IntakeM1.Set(SETspeed);
+}
