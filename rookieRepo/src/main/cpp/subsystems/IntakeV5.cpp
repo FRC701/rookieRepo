@@ -4,8 +4,15 @@
 
 #include "subsystems/IntakeV5.h"
 
-IntakeV5::IntakeV5() = default;
+IntakeV5::IntakeV5(WPI_TalonFX& ID1, WPI_TalonFX& ID2) 
+ :LosMotores(ID1),
+ LasMotores(ID2)
+ {}
 
 // This method will be called once per scheduler run
 void IntakeV5::Periodic() {}
 //we need more subsystems and commands
+double IntakeV5::motorSpeed(double MotorSpeed)
+{
+    LosMotores.Set(MotorSpeed);
+}
