@@ -4,9 +4,9 @@
 
 #include "subsystems/IntakeVersion2.h"
 
-IntakeVersion2::IntakeVersion2(WPI_TalonFX ID1, WPI_TalonFX ID2)
+IntakeVersion2::IntakeVersion2(WPI_TalonFX& ID1, WPI_TalonFX& ID2)
     : IntakeM1(ID1)
-          IntakeM2(ID2)
+    ,IntakeM2(ID2)
 {
 }
 
