@@ -19,6 +19,8 @@ class Shooter4 : public frc2::SubsystemBase {
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
 double motorSpeed(double MotorSpeed);
+double returnFive();
+double returnThree();
   private:
   WPI_TalonFX& Motor;
 

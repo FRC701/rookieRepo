@@ -18,4 +18,12 @@ double Shooter4:: motorSpeed(double MotorSpeed)
     return MotorSpeed;
 }
 
-x
+double Shooter4:: returnFive()
+{
+    return 5;
+}
+
+double Shooter4:: returnThree()
+{
+    return returnFive() - 2;
+}
