@@ -15,6 +15,8 @@ class Shooter3 : public frc2::SubsystemBase {
    */
   void Periodic() override;
 double SchoolShooter (double Speed);
+double MallShooter ();
+double DriveByShooter ();
  private:
  WPI_TalonFX& Momor;
   // Components (e.g. motor controllers and sensors) should generally be

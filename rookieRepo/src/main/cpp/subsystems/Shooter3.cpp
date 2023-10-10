@@ -18,3 +18,12 @@ double Shooter3::SchoolShooter(double Speed)
 Momor.Set(Speed);
 return Speed;
 }
+double Shooter3::MallShooter()
+{
+    return 5;
+}
+
+double Shooter3::DriveByShooter()
+{
+    return MallShooter()-2;
+}
