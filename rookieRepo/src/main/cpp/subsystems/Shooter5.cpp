@@ -17,3 +17,24 @@ double Shooter5::activateMotor(double MotorSpeed)
     MotorShooter.Set(MotorSpeed);
     return MotorSpeed;
 }
+
+double Shooter5::returnFive()
+{
+    return 5;
+}
+double Shooter5::returnThree()
+{
+    return returnFive() - 2;
+}
+double Shooter5::combineAllReturns()
+{
+    return activateMotor(5.5) + returnFive() + returnThree();
+}
+double Shooter5::getMotorVelocity()
+{
+    return MotorShooter.GetSelectedSensorVelocity();
+}
+double Shooter5::getMotorTick()
+{
+    return MotorShooter.GetSelectedSensorPosition();
+}

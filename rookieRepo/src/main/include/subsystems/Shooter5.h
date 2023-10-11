@@ -17,6 +17,11 @@ class Shooter5 : public frc2::SubsystemBase {
   void Periodic() override;
 
 double activateMotor(double MotorSpeed);
+double returnFive();
+double returnThree();
+double combineAllReturns();
+double getMotorVelocity();
+double getMotorTick();
  private:
  WPI_TalonFX& MotorShooter;
   // Components (e.g. motor controllers and sensors) should generally be
