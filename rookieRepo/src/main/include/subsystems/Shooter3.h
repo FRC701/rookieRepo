@@ -6,19 +6,23 @@
 
 #include <frc2/command/SubsystemBase.h>
 #include <ctre/Phoenix.h>
-class Shooter3 : public frc2::SubsystemBase {
- public:
-  Shooter3(WPI_TalonFX& ID1);
+class Shooter3 : public frc2::SubsystemBase
+{
+public:
+  Shooter3(WPI_TalonFX &ID1);
 
   /**
    * Will be called periodically whenever the CommandScheduler runs.
    */
   void Periodic() override;
-double SchoolShooter (double Speed);
-double MallShooter ();
-double DriveByShooter ();
- private:
- WPI_TalonFX& Momor;
+  double SchoolShooter(double Speed);
+  double MallShooter();
+  double DriveByShooter();
+  double RandomShooter();
+double NormalName();
+double ShooterName();
+private:
+  WPI_TalonFX &Momor;
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
 };

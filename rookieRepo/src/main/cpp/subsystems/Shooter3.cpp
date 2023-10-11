@@ -4,10 +4,9 @@
 
 #include "subsystems/Shooter3.h"
 
-Shooter3::Shooter3(WPI_TalonFX& ID1)
-:Momor(ID1)
+Shooter3::Shooter3(WPI_TalonFX &ID1)
+    : Momor(ID1)
 {
-
 }
 
 // This method will be called once per scheduler run
@@ -15,8 +14,8 @@ void Shooter3::Periodic() {}
 
 double Shooter3::SchoolShooter(double Speed)
 {
-Momor.Set(Speed);
-return Speed;
+    Momor.Set(Speed);
+    return Speed;
 }
 double Shooter3::MallShooter()
 {
@@ -25,5 +24,17 @@ double Shooter3::MallShooter()
 
 double Shooter3::DriveByShooter()
 {
-    return MallShooter()-2;
+    return MallShooter() - 2;
+}
+double Shooter3::RandomShooter()
+{
+    return SchoolShooter() + MallShooter() + DriveByShooter();
+}
+double Shooter3::NormalName()
+{
+    return Momor.GetSelectedSensorVelocity();
+}
+double Shooter3::ShooterName()
+{
+    return Momor.GetSelectedSensorPosition();
 }
