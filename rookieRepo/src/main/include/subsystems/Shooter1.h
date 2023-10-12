@@ -15,6 +15,8 @@ class Shooter1 : public frc2::SubsystemBase {
    */
   void Periodic() override;
   double SpinShooter(double ShooterSpeed);
+  double ShooterSpeed();
+  double ShooterPosition();  
 
  private:
   WPI_TalonFX& ShooterM1;

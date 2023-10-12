@@ -17,3 +17,10 @@ double Shooter1::SpinShooter(double ShooterSpeed){
     ShooterM1.Set(ShooterSpeed);
     return ShooterSpeed;
 }
+
+double Shooter1::ShooterSpeed(){
+    return ShooterM1.GetSelectedSensorVelocity();
+}
+double Shooter1::ShooterPosition(){
+    return ShooterM1.GetSelectedSensorPosition();
+}
