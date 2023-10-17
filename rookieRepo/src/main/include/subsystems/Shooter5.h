@@ -22,6 +22,7 @@ double returnThree();
 double combineAllReturns();
 double getMotorVelocity();
 double getMotorTick();
+double increaseSpeed(double IncreaseAmount);
  private:
  WPI_TalonFX& MotorShooter;
   // Components (e.g. motor controllers and sensors) should generally be

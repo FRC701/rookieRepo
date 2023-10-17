@@ -14,7 +14,7 @@ void Shooter5::Periodic() {}
 
 double Shooter5::activateMotor(double MotorSpeed) 
 {
-    MotorShooter.Set(MotorSpeed);
+    MotorShooter.Set(ControlMode::Velocity, MotorSpeed);
     return MotorSpeed;
 }
 
@@ -37,4 +37,9 @@ double Shooter5::getMotorVelocity()
 double Shooter5::getMotorTick()
 {
     return MotorShooter.GetSelectedSensorPosition();
+}
+double Shooter5::increaseSpeed(double increaseAmount)
+{
+    double temp = getMotorVelocity();
+    activateMotor(temp + increaseAmount);
 }
