@@ -28,7 +28,7 @@ double Shooter3::DriveByShooter()
 }
 double Shooter3::RandomShooter()
 {
-    return SchoolShooter() + MallShooter() + DriveByShooter();
+    return SchoolShooter(0.6) + MallShooter() + DriveByShooter();
 }
 double Shooter3::NormalName()
 {
