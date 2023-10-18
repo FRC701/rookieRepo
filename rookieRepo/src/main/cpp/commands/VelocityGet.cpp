@@ -14,10 +14,14 @@ VelocityGet::VelocityGet(Shooter6& shooter)
 void VelocityGet::Initialize() {}
 
 // Called repeatedly when this Command is scheduled to run
-void VelocityGet::Execute() {}
+void VelocityGet::Execute() {
+  mShooter6.ActivateShooterLeft(3);
+}
 
 // Called once the command ends or is interrupted.
-void VelocityGet::End(bool interrupted) {}
+void VelocityGet::End(bool interrupted) {
+  mShooter6.ActivateShooterLeft(0);
+}
 
 // Returns true when the command should end.
 bool VelocityGet::IsFinished() {
